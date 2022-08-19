@@ -26,5 +26,10 @@
     "esbenp.prettier-vscode",
     "ms-python.python",
     "PhilHindle.errorlens"
-  ]
+  ],
+  "features": {
+    "git": {
+      "version": "latest"
+    }
+  }
 }

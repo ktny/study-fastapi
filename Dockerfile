@@ -1,4 +1,4 @@
-FROM python:3.10.6-slim-bullseye
+FROM python:3.10.6-bullseye
 ENV PYTHONBUFFERED=1
 
 WORKDIR /src
