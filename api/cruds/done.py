@@ -1,4 +1,4 @@
-from typing import Tuple, Optional
+from typing import Optional, Tuple
 
 from sqlalchemy import select
 from sqlalchemy.engine import Result

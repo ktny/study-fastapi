@@ -8,13 +8,23 @@
   "runServices": ["app"],
   "settings": {
     "editor.formatOnSave": true,
-    "python.formatting.provider": "black",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
     "editor.defaultFormatter": "ms-python.python",
+    "python.languageServer": "Pylance",
+    "python.formatting.provider": "black",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.flake8Args": ["--ignore=E501"],
     "python.linting.lintOnSave": true
   },
-  "extensions": ["VisualStudioExptTeam.vscodeintellicode", "esbenp.prettier-vscode", "ms-python.python"],
-  "postCreateCommand": "apt-get update && apt-get install -y git"
+  "extensions": [
+    "VisualStudioExptTeam.vscodeintellicode",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "PhilHindle.errorlens"
+  ]
 }

@@ -1,11 +1,11 @@
-from typing import List, Tuple, Optional
+from typing import List, Optional, Tuple
 
 from sqlalchemy import select
 from sqlalchemy.engine import Result
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from api.models.task import Task, Done
 import api.schemas.task as task_schema
+from api.models.task import Done, Task
 
 
 async def create_task(db: AsyncSession, task_create: task_schema.TaskCreate) -> Task:
