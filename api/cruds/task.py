@@ -30,9 +30,7 @@ async def get_task_with_done(db: AsyncSession) -> List[Tuple[int, str, bool]]:
 
 
 async def get_task(db: AsyncSession, task_id: int) -> Optional[Task]:
-    result: Result = await db.execute(
-        select(Task).filter(Task.id == task_id)
-    )
+    result: Result = await db.execute(select(Task).filter(Task.id == task_id))
     task: Optional[Tuple[Task]] = result.first()
     return task[0] if task is not None else None
 
