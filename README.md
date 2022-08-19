@@ -12,6 +12,12 @@ docker compose up
 Swagger UI
 http://localhost:8000/docs
 
+## DB初期化
+
+```sh
+docker compose exec app poetry run python -m api.migrate_db
+```
+
 ## テスト
 
 ```sh
