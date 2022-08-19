@@ -1,5 +1,3 @@
-from typing import List
-
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -10,7 +8,7 @@ from api.db import get_db
 router = APIRouter()
 
 
-@router.get("/tasks", response_model=List[task_schema.Task])
+@router.get("/tasks", response_model=list[task_schema.Task])
 async def list_tasks(db: AsyncSession = Depends(get_db)):
     return await task_crud.get_task_with_done(db)
 

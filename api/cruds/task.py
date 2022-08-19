@@ -1,4 +1,4 @@
-from typing import List, Optional, Tuple
+from typing import Optional, Tuple
 
 from sqlalchemy import select
 from sqlalchemy.engine import Result
@@ -16,7 +16,7 @@ async def create_task(db: AsyncSession, task_create: task_schema.TaskCreate) -> 
     return task
 
 
-async def get_task_with_done(db: AsyncSession) -> List[Tuple[int, str, bool]]:
+async def get_task_with_done(db: AsyncSession) -> list[Tuple[int, str, bool]]:
     result: Result = await (
         db.execute(
             select(
